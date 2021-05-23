@@ -1,5 +1,5 @@
 {
   "port": 5000,
   "jwtSecret": "it's very strong key",
-  "mongoUri": "mongodb+srv://ihahn:Ygoi7b6gm@cluster0.l1mv3.mongodb.net/app?retryWrites=true&w=majority",
+  "mongoUri": "mongodb+srv://ihahn:Ygoi7b6gm@cluster0.l1mv3.mongodb.net/app?retryWrites=true&w=majority"
 }
