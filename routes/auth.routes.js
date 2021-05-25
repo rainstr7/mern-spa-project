@@ -1,10 +1,11 @@
 const {Router} = require('express');
+const router = Router();
 const bcrypt = require('bcrypt');
 const config = require('config');
 const jwt = require('jsonwebtoken');
 const {check, validationResult} = require('express-validator');
 const User = require('../models/User');
-const router = Router();
+
 
 // /api/auth/register
 router.post(
@@ -28,8 +29,8 @@ router.post(
             if (candidate) {
                 return res.status(400).json({message: "Такой пользователь существует"});
             }
-            const hashPassword = await bcrypt.hash(password, 12);
-            const user = new User({email, password: hashPassword});
+            const hashedPassword = await bcrypt.hash(password, 12);
+            const user = new User({email, password: hashedPassword});
             await user.save();
             res.status(201).json({message: 'Пользователь создан'})
         } catch (e) {
@@ -58,7 +59,7 @@ router.post(
             if (candidate) {
                 return res.status(400).json({message: 'Такой пользователь существует'});
             }
-            const hashPassword = await bcrypt.hash(password, 12);
+            // const hashedPassword = await bcrypt.hash(password, 12);
             const user = await User.findOne({ email })
             if (!user) {
                 return res.status(400).json({message:'Пользователь не найден'})
@@ -67,13 +68,10 @@ router.post(
             if (!isMatch) {
                 return res.status(400).json({message: 'Неверный пароль попробуйте снова'})
             }
-            const token = jwt.sign({
-                userId: user.id,
-            },
+            const token = jwt.sign(
+                { userId: user.id },
                 config.get('jwtSecret'),
-                {
-                    expiration: '1h',
-                }
+                { expiresIn: '1h' }
             );
             res.json({ token,userId: user.id })
         } catch (e) {

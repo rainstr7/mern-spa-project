@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, { useState }  from 'react';
 import { useHttp } from "../hooks/http.hook";
 
 export const AuthPage = () => {
