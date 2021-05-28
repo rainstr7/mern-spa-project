@@ -41,6 +41,7 @@ add new dependency to React package.json</br>
 <code>npm install react-router-dom</code></br>
 <a href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a> - DOM bindings for React Router.
 
-
+add new option to React package.json</br>
+"proxy": "http://localhost:5000"
 
 
