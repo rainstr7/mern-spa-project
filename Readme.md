@@ -47,3 +47,8 @@ add new option to React package.json</br>
 
 <code>npm install shordid</code></br>
 <a href="https://www.npmjs.com/package/shortid">ShortId</a> creates amazingly short non-sequential url-friendly unique ids. Perfect for url shorteners, MongoDB and Redis ids, and any other id users might see.
+
+<code>npm install --save-dev cross-env</code></br>
+<a href="https://www.npmjs.com/package/cross-env">cross-env</a> - run scripts that set and use environment variables across platforms
+
+
