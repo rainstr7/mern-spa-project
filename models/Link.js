@@ -9,3 +9,4 @@ const schema = new Schema({
 });
 
 module.exports = model('Link', schema);
+
