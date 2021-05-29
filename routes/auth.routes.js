@@ -9,7 +9,7 @@ const User = require('../models/User');
 
 // /api/auth/register
 router.post(
-    'register',
+    '/register',
     [
         check('email', 'Некорректный email').isEmail(),
         check('password', 'Минимальная длина пароля 6 символов')
@@ -40,9 +40,9 @@ router.post(
 
 // /api/auth/login
 router.post(
-    'login',
+    '/login',
     [
-        check('email', 'Введите корректный email').normalizeEmail().isEmail,
+        check('email', 'Введите корректный email').normalizeEmail().isEmail(),
         check('password', 'Введите пароль').exists(),
     ],
     async (req, res) => {
@@ -55,11 +55,6 @@ router.post(
                 })
             }
             const {email, password} = req.body;
-            const candidate = await User.findOne({email})
-            if (candidate) {
-                return res.status(400).json({message: 'Такой пользователь существует'});
-            }
-            // const hashedPassword = await bcrypt.hash(password, 12);
             const user = await User.findOne({ email })
             if (!user) {
                 return res.status(400).json({message:'Пользователь не найден'})
