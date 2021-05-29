@@ -29,6 +29,7 @@ Optimized <a href="https://www.npmjs.com/package/bcryptjs">bcrypt</a> in JavaScr
 
 Initialization React in directory "client"</br>
 <code>npx create-react-app [client]</code></br>
+<a href="https://materializecss.com/">UI styles - Materialize</a>
 
 add new script to root package. json</br>
 <code>"client": "npm run start ---prefix client"</code></br>
@@ -36,7 +37,7 @@ add new script to root package. json</br>
 
 add new dependency to React package.json</br>
 <code>npm install materialize-css@next</code></br>
-<a href="https://materializecss.com/">A modern responsive front-end framework based on Material Design</a></br>
+<a href="https://materializecss.com/">A modern responsive front-end framewogit commite 0rk based on Material Design</a></br>
 
 <code>npm install react-router-dom</code></br>
 <a href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a> - DOM bindings for React Router.
@@ -46,5 +47,3 @@ add new option to React package.json</br>
 
 <code>npm install shordid</code></br>
 <a href="https://www.npmjs.com/package/shortid">ShortId</a> creates amazingly short non-sequential url-friendly unique ids. Perfect for url shorteners, MongoDB and Redis ids, and any other id users might see.
-
-
