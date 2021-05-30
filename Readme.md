@@ -51,4 +51,22 @@ add new option to React package.json</br>
 <code>npm install --save-dev cross-env</code></br>
 <a href="https://www.npmjs.com/package/cross-env">cross-env</a> - run scripts that set and use environment variables across platforms
 
+Setting server
+https://vscale.io/
+add domain
+add server Ubuntu
+add ssh
+connect
+sudo apt update
+sudo apt -y upgrade
+sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install git
+sudo apt -y install nodejs
+git clone [rep]
+npm install 
+npm run install
+npm run client:install
+
+
 
