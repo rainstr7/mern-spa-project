@@ -51,22 +51,30 @@ add new option to React package.json</br>
 <code>npm install --save-dev cross-env</code></br>
 <a href="https://www.npmjs.com/package/cross-env">cross-env</a> - run scripts that set and use environment variables across platforms
 
-Setting server
-https://vscale.io/
-add domain
-add server Ubuntu
-add ssh
-connect
-sudo apt update
-sudo apt -y upgrade
-sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install git
-sudo apt -y install nodejs
-git clone [rep]
-npm install 
-npm run install
-npm run client:install
+<b>Setting server</b><br/>
+https://vscale.io/<br/>
+add domain<br/>
+add server Ubuntu<br/>
+add ssh<br/>
+connect<br/>
+sudo apt update<br/>
+sudo apt -y upgrade<br/>
+sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates<br/>
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -<br/>
+sudo apt install git<br/>
+sudo apt -y install nodejs<br/>
+git clone [repository link]<br/>
+npm install<br/>
+npm run client:install<br/>
+npm run client:build<br/>
+npm run start<br/>
+
+<b>On server install</b></br>
+<code>sudo npm install -g pm2</code></br>
+<code>pm2 start npm -- start</code></br>
+<code>pm2 stop [id process]</code></br>
+<a href="https://www.npmjs.com/package/pm2">PM2</a> is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.</br>
+
 
 
 
