@@ -2,8 +2,8 @@ const express = require('express');
 const config = require('config');
 const mongoose = require('mongoose');
 const path = require('path');
-const https = require('https');
-const fs = require('fs');
+// const https = require('https');
+// const fs = require('fs');
 
 const app = express();
 
@@ -20,8 +20,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = config.get('port') || 5000;
-const privateKey = fs.readFileSync( 'ssl/privatekey.pem' );
-const certificate = fs.readFileSync( 'ssl/certificate.pem' );
+// const privateKey = fs.readFileSync( 'ssl/privatekey.pem' );
+// const certificate = fs.readFileSync( 'ssl/certificate.pem' );
 
 async function start() {
     try {
@@ -30,11 +30,11 @@ async function start() {
             useUnifiedTopology: true,
             useCreateIndex: true,
         });
-        https.createServer({
-            key: privateKey,
-            cert: certificate
-        }, app).listen(PORT, () => (console.log(`App has been started on port ${PORT}...`)));
-        // app.listen(PORT, () => (console.log(`App has been started on port ${PORT}...`)))
+        // https.createServer({
+        //     key: privateKey,
+        //     cert: certificate
+        // }, app).listen(PORT, () => (console.log(`App has been started on port ${PORT}...`)));
+        app.listen(PORT, () => (console.log(`App has been started on port ${PORT}...`)))
     } catch (e) {
         console.log('Server Error', e.message);
         process.exit(1);
